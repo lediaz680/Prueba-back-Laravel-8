@@ -7,19 +7,22 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
  -->
-composer install 
+ ## INSTALACIONES CORRESPONDIENTES
+ 1.-- composer install 
 
-npm install 
+ 2.-- npm install 
 
- php artisan key:generate
+ 3.-- php artisan key:generate
+ ## ESTO PARA CREAR EL STORAGE LINK DE UPLOADS EN PUBLIC
+ 4. --php artisan storage:link 
+ 
+## CAMBIAR EL ARCHIVO, (QUITAR EL .example) .env.example PARA QUEDAR .env
+## EN .env CAMBIAR EL NOMBRE DE LA BASE DE DATOS A LA QUE CORRESPONDA
+-- DB_DATABASE=companies_employes
 
-cambiar el archivo .env.example por .env
 
-en el archivo .env cambiar el nombre de la base de datos 
-DB_DATABASE=companies_employes
+## CONFIGURAR MAILTRAP EN .env, DEBE QUEDAR ASI:
 
-
-configurar mailtrap en .env , debe quedar asi: 
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.mailtrap.io
 MAIL_PORT=2525
@@ -28,25 +31,15 @@ MAIL_PASSWORD=b506347fbb1dba
 MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS=correoEnviaPrueba@gmai.com
 MAIL_FROM_NAME="${APP_NAME}"
-realizar las migraciones con los seeders
 
-crear la base de datos en mysql 
-
-php artisan migrate
-## DESCARGA DEL PROYECTO
-
-## CREAR LA BASE DE DATOS EN 
-
-## CONFIGURACION BASE DE DATOS .ENV
-El NOMBRE DE LA BASE DE DATOS companies_employes
-
-## EN DATABASE SEEDERS EN RUN SE CREA EL PRIMER USUARIO AL MOMENTO DE MIGRAR
-Este usuario es admin@admin.com con contraseña password
-
-## REALIZAR LA MIGRACION CON EL SEEDER PARA CREAR REGISTROS CON FAKER DE COMPANIES Y EMPLOYES
-php artisan migrate --seed 
-## EN CASO DE MIGRAR SIN LOS SEEDERS
-php aritsan migrate:fresh --seed
+## CREAR LA BASE DE DATOS EN MYSQL 
+--companies_employes
 
 
-## EL PROYECTO ESTA CONFIGURADO PARA MULTI-LENGUAGE
+
+## MIGRACIONES CON SEEDERS (SE CREARÁ UN USUARIO admin@admin.com CON CONTRASEÑA password) POR DEFECTO PARA PRUEBAS
+ -- php artisan migrate --seed
+## EN CASO DE HABER MIGRADO SIN LOS SEEDERS 
+-- php artisan migrate:fresh --seed
+
+
